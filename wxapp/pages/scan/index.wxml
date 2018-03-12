@@ -1,0 +1,7 @@
+<view class="page">
+	<view class="tips">
+		<view class="tips-title">温馨提醒</view>
+		<view class="tips-body">请不要把你的手机放进储物柜！！！</view>
+		<view class="tips-submit" bindtap="scan">我已确认</view>
+	</view>
+</view>

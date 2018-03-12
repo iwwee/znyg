@@ -29,6 +29,13 @@ Page({
     })
   },
   scan(){
-  	console.log( app.Page )
+  	       wx.redirectTo({
+              url:"../scan/index"
+          })
+  },
+  map(){
+           wx.redirectTo({
+              url:"../map/index"
+          })
   }
 })

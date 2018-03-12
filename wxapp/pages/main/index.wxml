@@ -22,14 +22,14 @@
 
     <view class="footer">
         <view class="footer-items">
-            <view class="footer-item footer-left ilblock">
+            <view class="footer-item footer-left ilblock" bindtap="map">
                 <image src="{{picture.map}}">
                 </image>
             </view>
             <view bindtap="scan" class="footer-item footer-mid ilblock">
                 —
             </view>
-            <view class="footer-item footer-right ilblock">
+            <view class="footer-item footer-right ilblock" bindtap="person">
                 <image src="{{picture.person}}">
                 </image>
             </view>
