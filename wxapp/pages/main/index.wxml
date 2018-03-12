@@ -1,0 +1,38 @@
+<view>
+    <view class="bg">
+        <image class="bg" height="100%" mode="aspectFit" src="{{picture.bg}}">
+        </image>
+    </view>
+
+    <block wx:if="{{notice}}">
+        <view wx:for="{{notice}}" wx:key="id">
+            <view class="notice">
+                <view class="notice-item">
+                    <view class="notice-header">
+                        {{item.title}}
+                    </view>
+                    <view class="notice-body">
+                        {{item.body}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view wx:else> 3 </view>
+
+    <view class="footer">
+        <view class="footer-items">
+            <view class="footer-item footer-left ilblock">
+                <image src="{{picture.map}}">
+                </image>
+            </view>
+            <view bindtap="scan" class="footer-item footer-mid ilblock">
+                —
+            </view>
+            <view class="footer-item footer-right ilblock">
+                <image src="{{picture.person}}">
+                </image>
+            </view>
+        </view>
+    </view>
+</view>
