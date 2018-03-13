@@ -54,10 +54,10 @@
 
 .notice-body{
 	z-index: 999;
-	padding: 15rpx 20rpx;
+	padding: 15rpx 20rpx 0 15rpx;
 	font-size: 35rpx;
 	height: 210rpx;
-	width: 100%;
+	/*width: 100%;*/
 	background: #000;
 	opacity: 0.5;
 	color: #fff;
