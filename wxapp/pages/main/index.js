@@ -42,6 +42,6 @@ Page({
         })
     },
     person() {
-      wx.showToast({title:app.wx.getOpenId()})
+		wx.showToast({title:app.wx.getOpenId()})
     }
 })

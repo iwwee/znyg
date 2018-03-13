@@ -2,7 +2,7 @@ import base from 'base'
 
 
 let main = {
-	Aritice: base.Url + "/getArticleLists"
+	Aritice: base.Url + "/articleLists"
 }
 
 export default {
