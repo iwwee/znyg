@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/person/takeout/index",
     "pages/main/index",
+    "pages/person/takeout/index",
     "pages/map/index",
     "pages/scan/index"
   ],

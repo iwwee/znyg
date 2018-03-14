@@ -16,6 +16,7 @@ Page({
     },
     onLoad(options) {
         _this = this;
+        app.wx.getLocation()
         setInterval(
             ()=>{
                 let nowText = this.data.loadingText;

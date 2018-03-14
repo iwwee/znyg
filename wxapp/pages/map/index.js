@@ -1,18 +1,33 @@
 // pages/scan/index.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    location:{},
+    markers:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let location = app.wx.getLocation()
+    this.setData({
+      location: location
+    })
+    this.setData({
+      markers: {
+        id: 0,
+        iconPath:"/static/mapt.png",
+        latitude: location.latitude,
+        longitude: location.longitude,
+        width: 50,
+        height: 50
+      }
+    })
   },
 
   /**
