@@ -1,7 +1,4 @@
-// pages/scan/index.js
-const app = getApp()
-var form_id = false;
-
+// pages/person/takeout/index.js
 Page({
 
   /**
@@ -15,7 +12,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      wx.showModal({
+        title:"操作失败",
+        content:"你没有待取物品",
+        showCancel:false,
+        success:()=>{
+          wx.navigateTo({
+            url:'/pages/main/index'
+          })
+        }
+      })
   },
 
   /**
@@ -28,31 +34,9 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  scan() {
-    wx.scanCode({
-      onlyFromCamera:true,
-      complete:(res)=>{
-        wx.showModal({
-          title:"扫描失败",
-          content:"很抱歉，您扫描的不是我们的储物柜",
-          showCancel:false,
-          success:(e)=>{
-            let data = {}
-            data.openid = app.wx.getOpenId();
-            data.formId = form_id
-            console.log(data)
-            app.wx.request(app.Page.scan.sendTemplate,data)
-            wx.redirectTo({
-              url:"../main/index"
-            })
-          }
-        })
-      }
-    })
+  onShow: function () {
+  
   },
-    formSubmit(e){
-      form_id = e.detail.formId
-    },
 
   /**
    * 生命周期函数--监听页面隐藏

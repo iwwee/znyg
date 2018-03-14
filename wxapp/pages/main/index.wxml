@@ -18,7 +18,7 @@
             </view>
         </view>
     </block>
-    <view wx:else> 加载中 </view>
+    <view wx:else class="loading"> {{loadingText}} </view>
 
     <view class="footer">
         <view class="footer-items">

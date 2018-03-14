@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/person/takeout/index",
     "pages/main/index",
-        "pages/map/index",
+    "pages/map/index",
     "pages/scan/index"
-
   ],
   "window": {
     "backgroundTextStyle": "light",

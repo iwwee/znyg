@@ -11,10 +11,30 @@ Page({
             map: "../../static/map.png",
             person: "../../static/person.png"
         },
-        notice: false
+        notice: false,
+        loadingText: "加载中"
     },
     onLoad(options) {
         _this = this;
+        setInterval(
+            ()=>{
+                let nowText = this.data.loadingText;
+                let nextText = "";
+                switch(nowText){
+                    case "加载中":
+                    case "加载中。":
+                    case "加载中。。":
+                    nextText = nowText + "。"
+                    break;
+                    case "加载中。。。":
+                    nextText = "加载中"
+                    break;
+                }
+                this.setData({
+                    loadingText: nextText
+                })
+            }
+            ,1000)
         wx.request({
             url: app.Page.main.Aritice,
             success: (res) => {
@@ -42,6 +62,13 @@ Page({
         })
     },
     person() {
-		wx.showToast({title:app.wx.getOpenId()})
+      // wx.showModal({
+      //   title:"操作失败",
+      //   content:"你附近没有智能云柜，无法进入下一步",
+      //   showCancel:false
+      // })
+                wx.navigateTo({
+            url:'/pages/person/takeout/index'
+          })
     }
 })

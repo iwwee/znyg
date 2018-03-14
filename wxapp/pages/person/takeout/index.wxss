@@ -1,0 +1,18 @@
+/* pages/person/takeout/index.wxss */
+
+.tab{
+	width:50%;
+	display: inline-block;
+	text-align: center;
+	background: #CCCC33;
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box;
+	/*border-top: 0;*/
+}
+
+.active{
+	color: #fff;
+	background: #CCCC66;
+	border: 0;
+}

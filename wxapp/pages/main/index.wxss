@@ -8,6 +8,24 @@
   justify-content: center;/*水平居中*/
 }
 
+.loading{
+	position: absolute;
+	border-radius: 20px;
+	opacity: 0.7;
+	color:#fff;
+	font-size: 66rpx;
+	text-align: center;
+	line-height: 400rpx;
+	background: #996666;
+	display: inline-block;
+	width: 600rpx;
+	height: 400rpx;
+	left: 50%;
+	margin-left: -300rpx;
+	z-index: 9999;
+	top:10%;
+}
+
 .notice{
 	position: relative;
 	margin-left: 5%;

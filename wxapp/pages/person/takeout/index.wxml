@@ -1,0 +1,3 @@
+<!--pages/person/takeout/index.wxml-->
+<span class="tab active">未领存包</span>
+<span class="tab">历史存包</span>
