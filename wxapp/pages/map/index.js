@@ -7,27 +7,65 @@ Page({
    */
   data: {
     location:{},
-    markers:{}
+    markers:[],
+    circles:[],
+    controls:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // return;
     let location = app.wx.getLocation()
     this.setData({
-      location: location
-    })
-    this.setData({
-      markers: {
+      location: location,
+      circles: [{
+          latitude: location.latitude,
+          longitude: location.longitude,
+          color: '#FF0000DD',
+          fillColor: '#7cb5ec88',
+          radius: 600,
+          strokeWidth: 1
+        }],
+      markers: [{
         id: 0,
         iconPath:"/static/mapt.png",
         latitude: location.latitude,
         longitude: location.longitude,
-        width: 50,
-        height: 50
+        width: 30,
+        height: 30,
+        callout: {
+          content:"我的位置",
+          bgColor:"#CCFF33",
+          padding: 10,
+          borderRadius: 15,
+          alpha:0.5
+        }
+      }],
+      controls:{
+
       }
     })
+
+    console.log(this.data.location)
+    console.log(this.data.markers)
+  },
+  bindmark(e){
+    console.log(e)
+  },
+  find(){
+    wx.showToast({
+      title:"正在搜索",
+      icon:"loading",
+    })
+    setTimeout(()=>{
+         wx.showModal({
+          title:"操作失败",
+          content:"很遗憾，你附近没有智能云柜",
+          showCancel:false
+        })
+    },1500)
   },
 
   /**

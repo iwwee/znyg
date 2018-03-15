@@ -53,12 +53,12 @@ Page({
         })
     },
     scan() {
-        wx.redirectTo({
+        wx.navigateTo({
             url: "../scan/index"
         })
     },
     map() {
-        wx.redirectTo({
+        wx.navigateTo({
             url: "../map/index"
         })
     },
@@ -68,8 +68,8 @@ Page({
       //   content:"你附近没有智能云柜，无法进入下一步",
       //   showCancel:false
       // })
-                wx.navigateTo({
+        wx.navigateTo({
             url:'/pages/person/takeout/index'
-          })
+        })
     }
 })
